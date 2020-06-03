@@ -1,0 +1,34 @@
+plugins {
+  id 'java'
+  id 'application'
+  id 'com.github.johnrengelman.shadow' version '4.0.4'
+}
+
+mainClassName = 'AbohBOTGradle.Bot'
+
+version = '1.0'
+
+sourceCompatibility = 11
+
+
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'net.dv8tion:JDA:4.1.1_136'
+  implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+  implementation 'com.sedmelluq:lavaplayer:1.3.47'
+ 
+  
+  
+}
+
+jar {
+ manifest {
+ 	 attributes "Main-Class": "AbohBOTGradle.Bot"
+ 	 }
+ 	}
+
+compileJava.options.encoding = 'UTF-8'
